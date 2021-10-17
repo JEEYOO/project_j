@@ -1,0 +1,7 @@
+import pandas 
+import numpy  
+import matplotlib.pyplot 
+
+series1 = pandas.Series([1,numpy.nan,8]) # nan
+
+print(series1) # print datatype as well
