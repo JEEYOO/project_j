@@ -7,6 +7,17 @@ series1 = pandas.Series([1,numpy.nan,8]) # nan
 print(series1) # print datatype as well
 
 
-dates = pandas.date_range('20130401', periods=6) # date_range 하고 periods (그럼 월별 년도별은 다른 함수 쓰나) 
+dates = pandas.date_range('20130401', periods=6) # date_range & periods 
 
 print(dates)
+
+dfex2 = pandas.DataFrame({'a' : 1,
+                          'b' : pandas.Timestamp('16771111'), #1111311 is not possible. Available from 1677  
+
+                          'c' : pandas.Series(33, index=list(range(4)), dtype='float32'), 
+                          'dd' : numpy.array([3]*4, dtype='int32'), #finish with dtype
+                          'EE' : pandas.Categorical(['t','e','a','ms']),
+                          'F' : 'fooo' 
+})
+
+print(dfex2)
