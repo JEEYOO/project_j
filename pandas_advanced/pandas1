@@ -5,3 +5,8 @@ import matplotlib.pyplot
 series1 = pandas.Series([1,numpy.nan,8]) # nan
 
 print(series1) # print datatype as well
+
+
+dates = pandas.date_range('20130401', periods=6) # date_range 하고 periods (그럼 월별 년도별은 다른 함수 쓰나) 
+
+print(dates)
