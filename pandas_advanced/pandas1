@@ -21,3 +21,7 @@ dfex2 = pandas.DataFrame({'a' : 1,
 })
 
 print(dfex2)
+
+
+arr = np.arange(100, 105) #arrange 가 아님 
+arr
