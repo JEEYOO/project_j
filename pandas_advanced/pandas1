@@ -29,12 +29,35 @@ s = pd.Series(['손흥민', '김연아', '박세리', '박찬호', '김연경'],
 
 #Fancy indexing
 s[['a','c']] # 그냥 만들수가있네 병렬로 해서
-
+"""
 a    손흥민
 c    박세리
+"""
 
 #Boolean indexing
 s[[True, True, False, False, True]]
+"""
 a    마케팅
 b     경영
 e     인사
+"""
+
+#Boolean indexing 즉석에서 조건걸기
+s2 = pd.Series([29, 99, np.nan, 11, 56], index=['a', 'b', 'c', 'd', 'e'])
+
+s2 > 50
+"""
+a    False
+b     True
+c    False
+d    False
+e     True
+"""
+
+
+
+s[s > 50]
+"""
+b 99.0
+e 56.0
+"""
