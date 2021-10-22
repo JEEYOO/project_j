@@ -22,9 +22,19 @@ dfex2 = pandas.DataFrame({'a' : 1,
 
 print(dfex2)
 
-
 arr = np.arange(100, 105) #arrange 가 아님 
 arr
 
-#
+s = pd.Series(['손흥민', '김연아', '박세리', '박찬호', '김연경'], index=['a', 'b', 'c', 'd', 'e'])
+
+#Fancy indexing
 s[['a','c']] # 그냥 만들수가있네 병렬로 해서
+
+a    손흥민
+c    박세리
+
+#Boolean indexing
+s[[True, True, False, False, True]]
+a    마케팅
+b     경영
+e     인사
