@@ -25,3 +25,6 @@ print(dfex2)
 
 arr = np.arange(100, 105) #arrange 가 아님 
 arr
+
+#
+s[['a','c']] # 그냥 만들수가있네 병렬로 해서
