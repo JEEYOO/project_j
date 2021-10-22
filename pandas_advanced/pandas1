@@ -61,3 +61,6 @@ s[s > 50]
 b 99.0
 e 56.0
 """
+
+
+df.rename(columns={'name': '이름'})
