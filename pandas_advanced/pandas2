@@ -1,0 +1,12 @@
+excel = pd.read_excel('data/seoul_transportation.xlsx', sheet_name='버스', engine='openpyxl')
+
+# 시트 조회          엑셀 밑의 tab 에 있는 sheet 들 말하는거 
+excel.keys()      
+
+"""
+dict_keys(['철도', '버스'])
+"""
+
+excel['철도'].head()
+excel['철도']   
+
