@@ -11,3 +11,7 @@ excel['철도'].head()
 excel['철도']   
 
 
+df = pd.read_csv('data/seoul_population.csv', chunksize=10)
+
+for w in df:
+    display(w)
