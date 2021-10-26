@@ -1,4 +1,4 @@
-excel = pd.read_excel('data/seoul_transportation.xlsx', sheet_name='버스', engine='openpyxl')
+excel = pd.read_excel('data/seoul_transportation.xlsx', sheet_name='버스', engine='openpyxl')      #data folder를 만들어서
 
 # 시트 조회          엑셀 밑의 tab 에 있는 sheet 들 말하는거 
 excel.keys()      
@@ -10,4 +10,4 @@ dict_keys(['철도', '버스'])
 excel['철도'].head()
 excel['철도']   
 
-excel = pd.read_excel('data/seoul_transportation.xlsx', sheet_name='철도', engine='openpyxl') #data folder를 만들어서
+
