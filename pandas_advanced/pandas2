@@ -11,7 +11,7 @@ excel['철도'].head()
 excel['철도']   
 
 
-df = pd.read_csv('data/seoul_population.csv', chunksize=10)           #chunksize
+df = pd.read_csv('data/seoul_population.csv', chunksize=10)           #chunksize : 가져오긴 가져오는데, 끊어서 가져온다는 것
 
 for w in df:                                                          #whatever
     display(w)
