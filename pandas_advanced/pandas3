@@ -6,3 +6,13 @@ import seaborn as sns
 #################################
 
 df = sns.load_dataset("titanic") #import seaborn as sns
+
+
+df['who'].value_counts()   #묶어서
+
+
+"""
+man      537
+woman    271
+child     83
+"""
