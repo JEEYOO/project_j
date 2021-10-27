@@ -10,9 +10,15 @@ df = sns.load_dataset("titanic") #import seaborn as sns
 
 df['who'].value_counts()   #묶어서
 
-
 """
 man      537
 woman    271
 child     83
+"""
+
+
+df.shape     #pandas1에서 확인하였던 1차원과 다르게 2차원이니까 shape 
+
+"""
+(891, 15)
 """
