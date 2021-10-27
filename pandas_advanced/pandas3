@@ -24,3 +24,7 @@ df.shape     #pandas1에서 확인하였던 1차원과 다르게 2차원이니�
 """
 
 df.T         #T: **전치 (Transpose)** 는 Index와 Column의 축을 교환합니다. 
+
+
+
+df.sort_values(by='age', ascending=False).head()       #
