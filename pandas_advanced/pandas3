@@ -29,3 +29,6 @@ df.T         #T: **전치 (Transpose)** 는 Index와 Column의 축을 교환합�
 
 df.sort_values(by='age', ascending=False).head()                           #정렬
 df.sort_values(by=['fare', 'age'], ascending=[False, True]).head()         #두 개 이상도  ascending 기본에다가 True/False로 
+
+
+df.loc[:6, 'class':'deck']
