@@ -27,3 +27,5 @@ test = pd.read_csv(os.path.join(DATA_DIR, project_name, 'test.csv'))
 
 
 train.groupby('season')['casual'].mean() #season 에 따라서 비회원이 얼마나 타는가 -> 2여름, 3가을 이 많음 1봄이제일적음
+
+train.temp.describe()
