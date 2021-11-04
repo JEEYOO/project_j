@@ -32,3 +32,5 @@ train.temp.describe()
 
 train['datetime'] = pd.to_datetime(train['datetime']) #시간 변수로 바꿔서
 train.info()
+
+train.groupby('month')['temp'].mean().plot(kind='bar')
