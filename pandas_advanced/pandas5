@@ -1,0 +1,5 @@
+data_set = sns.load_dataset('titanic')
+
+ds_copy = data_set.copy()
+
+ds_copy.loc[0, 'age'] = 99999
