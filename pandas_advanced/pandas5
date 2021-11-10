@@ -3,3 +3,14 @@ data_set = sns.load_dataset('titanic')
 ds_copy = data_set.copy()
 
 ds_copy.loc[0, 'age'] = 99999
+
+test.shape
+
+#test.isnull()
+test.isnull().sum()
+
+train['Survived'].value_counts()
+#test['Survived'].value_counts()  해당 columns 이 없어서
+
+train.groupby('Pclass')['Survived'].sum()
+                                #sum 안하면 <pandas.core.groupby.generic.SeriesGroupBy object at 0x7fe2b4dc18d0>
