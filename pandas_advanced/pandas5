@@ -14,3 +14,6 @@ train['Survived'].value_counts()
 
 train.groupby('Pclass')['Survived'].sum()
                                 #sum 안하면 <pandas.core.groupby.generic.SeriesGroupBy object at 0x7fe2b4dc18d0>
+                                
+                                
+train.groupby('Embarked')['Survived'].mean()
