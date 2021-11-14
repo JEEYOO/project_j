@@ -17,3 +17,6 @@ train.groupby('Pclass')['Survived'].sum()
                                 
                                 
 train.groupby('Embarked')['Survived'].mean()
+
+
+prediction = model.predict(df_scaled_test)
