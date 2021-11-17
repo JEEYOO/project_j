@@ -1,0 +1,13 @@
+import pandas as pd
+from sklearn.datasets import load_boston
+
+bostondata = load_boston()
+bostondata
+
+df = pd.DataFrame(bostondata['data'], columns = bostondata['feature_names'])
+df['WHATEVEr'] = boston['target']
+
+from sklearn.model_selection import train_test_split
+
+x = df.loc[:, 'CRIM':'LSTAT']
+y = df.loc[:,'WHATEVEr']
