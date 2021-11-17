@@ -3,3 +3,37 @@
 from sklearn.model_selection import train_test_split
 
 x_train, x_val, y_train, y_val = train_test_split(x, y, test_size = 0.2, shuffle=True, stratify=y, random_state=1)
+
+
+from sklearn import linear_model
+
+reg_1 = linear_model.LinearRegression()
+
+from sklearn.metrics import mean_absolute_error
+
+reg_1.fit(x_train, y_train) 
+train_mae = mean_absolute_error(y_train, reg_1.predict(x_train))
+val_mae = mean_absolute_error(y_val, reg_1.predict(x_val))
+
+
+print(train_mae, val_mae) 
+
+numeric_vars = ['Id', 'MSSubClass',
+        'SalePrice']
+
+
+for whatever_each in numeric_vars:
+    x = np.array(train_copy[whatever_each])
+    x = np.expand_dims(x, 1) 
+    y = np.array(train_copy.SalePrice)
+
+    x_train, x_val, y_train, y_val = train_test_split(x, y, test_size = 0.2, shuffle=True, random_state=1) 
+
+    reg_1 = linear_model.LinearRegression()
+
+    reg_1.fit(x_train, y_train) 
+    train_mae = mean_absolute_error(y_train, reg_1.predict(x_train))
+    val_mae = mean_absolute_error(y_val, reg_1.predict(x_val))
+    print(whatever_each) 
+    print(train_mae, val_mae)
+    
