@@ -37,3 +37,22 @@ for whatever_each in numeric_vars:
     print(whatever_each) 
     print(train_mae, val_mae)
     
+
+test1 = test.copy()
+test1['id1'] = test1.apply(lambda x : str(x.Id) + str(x.MSSubClass), axis=1) 
+
+x_test = np.array(test1['OverallQual'])
+x_test = np.expand_dims(x_test,1)
+
+
+reg_1_best = linear_model.LinearRegression()
+x = np.array(train_copy['OverallQual'])
+x = np.expand_dims(x,1)
+y = np.array(train_copy.SalePrice)
+reg_1_best.fit(x,y)
+
+
+y_test_predict = reg_1_best.predict(x_test)
+pd.DataFrame({'Id':test1['id1'], 'SalePrice':y_test_predict})
+q1_submission = pd.DataFrame({'Id':test1['id1'], 'SalePrice':y_test_predict}) 
+q1_submission.to_csv('submission1.csv')
