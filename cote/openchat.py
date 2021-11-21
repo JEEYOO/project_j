@@ -5,10 +5,24 @@ def korean_verb(any):
 
 def solution(record):
     answer = []
+    dic = {}
     
-    for sentences in range(len(record)):
+    
+    for sentences in range(len(record)): 
+        
         words = record[sentences].split()
         explanation = korean_verb(words[0])
-        answer.append(words[1]+explanation)
+        if words[0]!='Leave':
+            dic[words[1]] = words[2] 
+        if words[0]!='Change':
+            answer.append(words[1]+' '+explanation) 
+        
+    answer2 = []
     
-    return answer
+    for sentences2 in range(len(answer)):
+        words2 = answer[sentences2].split()
+        #idton = dic[words2]
+        answer2.append(dic[words2[0]]+words2[1]+' '+words2[2])
+        
+    
+    return answer2
