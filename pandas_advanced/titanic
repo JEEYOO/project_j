@@ -1,0 +1,34 @@
+!pip install --upgrade mySUNI -q
+import mySUNI
+from mySUNI import cds
+print(f'Package version: {mySUNI.__version__}')
+
+
+cds.download_project(project_name, class_info, email)
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import warnings
+import os
+
+
+DATA_DIR = 'data'
+
+warnings.filterwarnings('ignore')
+
+SEED=123
+
+train.head()
+test.head()
+
+
+test.shape
+test.isnull().sum()
+
+train['Survived'].value_counts()
+
+train.groupby('Pclass')['Survived'].sum()
+                                #sum 안하면 <pandas.core.groupby.generic.SeriesGroupBy object at 0x7fe2b4dc18d0>
+train.groupby('Embarked')['Survived'].mean()
