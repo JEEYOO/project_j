@@ -1,0 +1,8 @@
+from sklearn.datasets import load_iris
+iris = load_iris()
+
+iris
+print(iris)
+
+type(iris)
+iris.keys()    #dict_keys(['data', 'target', 'frame', 'target_names', 'DESCR', 'feature_names', 'filename', 'data_module'])
