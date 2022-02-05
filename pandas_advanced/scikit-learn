@@ -6,3 +6,8 @@ print(iris)
 
 type(iris)
 iris.keys()    #dict_keys(['data', 'target', 'frame', 'target_names', 'DESCR', 'feature_names', 'filename', 'data_module'])
+
+type(iris.data)
+iris.data[:5]
+iris.data.shape
+iris.feature_names
