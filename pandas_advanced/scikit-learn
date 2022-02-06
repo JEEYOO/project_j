@@ -11,3 +11,5 @@ type(iris.data)
 iris.data[:5]
 iris.data.shape
 iris.feature_names
+
+print([iris.target_names[target] for target in iris.target])
