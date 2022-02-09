@@ -13,3 +13,15 @@ iris.data.shape
 iris.feature_names
 
 print([iris.target_names[target] for target in iris.target])
+
+
+import numpy
+
+x10 = numpy.array([10, 9, 3, 2])
+x10
+
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10,5))
+
+plt.subplot(1,2,1)
