@@ -52,3 +52,5 @@ test_mae1 = mean_absolute_error(y_test, model1.predict(x_test)) #test 데이터�
 
 print(train_mae1, test_mae1)
 #1.0229724900774897 0.9787223341213411 비슷  이값이 ~이하면 괜찮다 이런식으로 Q1.
+
+test_copy['sample_col'] = test_copy.apply(lambda x_axis2 : str(x_axis2.longitude) + str(x_axis2.latitude),axis=1)
