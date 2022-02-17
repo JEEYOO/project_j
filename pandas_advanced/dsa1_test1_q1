@@ -1,0 +1,46 @@
+import pandas as pd
+
+# 데이터 로드
+train = pd.read_csv('train.csv')
+#val = pd.read_csv('./data/price_data_val.csv')
+test = pd.read_csv('test.csv')
+
+train.head()
+
+y_variables = ['price'] #타겟으로 잡아야함, price하고 id 는 아예 안넣음 
+
+set(train['waterfront'])
+#{0, 1}
+
+category_variables = ['waterfront']
+
+from sklearn import linear_model
+import numpy
+from sklearn.model_selection import train_test_split #train_test_split 도 라이브러리에서 가져오는 것
+from sklearn.metrics import mean_absolute_error
+
+train.corr(method='pearson', min_periods=1).loc['price',:] # sqft_living 가 높음. Price 로 한 이유는 문제에서 물었기에
+#왜 : 로 date 는 안나오는가 
+
+
+id              -0.018804
+price            1.000000
+bedrooms         0.308996
+bathrooms        0.528705
+sqft_living      0.700241
+sqft_lot         0.085668
+floors           0.255690
+waterfront       0.271197
+view             0.401804
+condition        0.034325
+grade            0.670901
+sqft_above       0.603719
+sqft_basement    0.323747
+yr_built         0.057652
+yr_renovated     0.116310
+zipcode         -0.056180
+lat              0.307434
+long             0.023311
+sqft_living15    0.591559
+sqft_lot15       0.080190
+Name: price, dtype: float64
