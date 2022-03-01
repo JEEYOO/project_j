@@ -1,0 +1,19 @@
+from google.colab import drive
+drive.mount('/content/drive')
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+# 데이터 로드
+
+train = pd.read_csv('drive/MyDrive/Colab_Notebooks/fashion_mnist/data/train.csv', index_col='index') #index 인 column 을 미리 말해서 숫자 취급한다
+
+test = pd.read_csv('drive/MyDrive/Colab_Notebooks/fashion_mnist/data/test.csv', index_col='index')
+
+train.head()
+
+img = np.array(train.iloc[81,1:],dtype = 'float32').reshape((28,28))
+plt.imshow(img, cmap = 'gray')
+plt.show()
