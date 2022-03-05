@@ -1,0 +1,42 @@
+import pandas as pd
+import lightgbm as lgbm                 #new 
+
+from google.colab import drive
+drive.mount('/content/drive')
+
+train = pd.read_csv('drive/MyDrive/Colab_Notebooks/wine/data/train.csv') #index_col='index'            index 인 column 을 미리 말해서 숫자 취급한다
+
+test = pd.read_csv('drive/MyDrive/Colab_Notebooks/wine/data/test.csv')
+
+print(train.shape)
+print(test.shape)
+
+train.info()
+
+train.isnull().sum()
+
+train.describe()
+
+train.columns #전체 column 리스트 뽑기 
+
+
+columns = ['fixed acidity', 'volatile acidity', 'citric acid',
+       'residual sugar', 'chlorides', 'free sulfur dioxide',
+       'total sulfur dioxide', 'density', 'pH', 'sulphates', 'alcohol'] #수치형 data만 남겨두기 
+
+trash_bin = ['index', 'quality','type']
+
+import seaborn
+import matplotlib.pyplot as pyp
+
+train1 = train
+
+#일단 하나에 대해서
+
+seaborn.displot(train1['fixed acidity'])
+#pyp.show()
+
+#모든 col에 대해서 
+'''
+for co1 in columns:
+'''
