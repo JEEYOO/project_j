@@ -2,6 +2,7 @@
 SELECT TOP (1000) [CUST_ID], [BIRTH_DTH]
 FROM [MYDB1]
 
+/*DBeaver sample*/
 CREATE TABLE [Employee]
 (
     [EmployeeId] INTEGER  NOT NULL,
