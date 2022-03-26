@@ -1,0 +1,9 @@
+#16
+
+def exp(x):
+    t = x^2
+    return t*(t+1)
+
+t = 1 ;  x = 2
+
+exp(3), t, x
