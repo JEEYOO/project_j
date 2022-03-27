@@ -7,3 +7,18 @@ def exp(x):
 t = 1 ;  x = 2
 
 exp(3), t, x
+
+a = 0; b  = 10
+for i in[1..b]:
+    a = a + 2*i * (2*i+1)
+
+a
+
+
+c = 2.0; d = 50.0
+while c-d >= 1.0e-6: #1.0e-6 = 1.0*10^-6
+    temp = c
+    c = 2 * c * d / (c+d)
+    d = (temp+d) / 2
+    
+c, d
