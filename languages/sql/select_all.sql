@@ -28,3 +28,6 @@ ORDER BY NAME, DATETIME DESC
 
 select * from persons
 select MIN(Score) from persons -- 80
+
+SELECT COUNT(ANIMAL_ID)
+FROM ANIMAL_INS
