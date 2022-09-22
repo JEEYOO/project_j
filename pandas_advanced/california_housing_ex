@@ -34,7 +34,7 @@ train_copy.corr(method='pearson', min_periods=1).loc['median_house_value',:]
 x_axis2 = numpy.array(train_copy['median_house_value'])
 x_axis2
 x_axis2 = numpy.expand_dims(x_axis2, axis = 1)
-x_axis2 # 2차원 완성
+x_axis2 # 2-dimensional
 x_axis2.shape     #(17000, 1)
 
 # y 
