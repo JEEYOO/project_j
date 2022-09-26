@@ -10,3 +10,7 @@ for i in range(3, 6):
 #decimal
 print(6.)
 print(-.3)
+
+print(2e4)
+print(32.2e2)
+print(0.5e-1)
