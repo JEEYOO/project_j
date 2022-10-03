@@ -13,3 +13,17 @@ print(A == 0, B == 0)
 
 print(1.1+2.2)
 print(0.1+0.2)
+
+
+
+#global
+a = 0
+
+def ex1():
+  global a
+  a += 1
+  
+for i in range(5):
+  ex1()
+  
+print(a)
