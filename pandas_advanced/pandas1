@@ -28,7 +28,7 @@ arr
 s = pd.Series(['손흥민', '김연아', '박세리', '박찬호', '김연경'], index=['a', 'b', 'c', 'd', 'e'])
 
 #Fancy indexing
-s[['a','c']] # 그냥 만들수가있네 병렬로 해서
+s[['a','c']] # parallel
 """
 a    손흥민
 c    박세리
@@ -42,7 +42,7 @@ b     경영
 e     인사
 """
 
-#Boolean indexing 즉석에서 조건걸기
+#Boolean indexing / make condition instantly 
 s2 = pd.Series([29, 99, np.nan, 11, 56], index=['a', 'b', 'c', 'd', 'e'])
 
 s2 > 50
