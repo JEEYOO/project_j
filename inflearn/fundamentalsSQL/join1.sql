@@ -15,3 +15,5 @@ from hr.dept a
   join hr.emp b on a.deptno = b.deptno
   join hr.emp_salary_hist c on b.empno = c.empno   
 where a.dname in ('SALES', 'RESEARCH')
+and c.fromdate >= to_date('19830101', 'yyyymmdd')
+order by 1, 2, 3, c.fromdate;
