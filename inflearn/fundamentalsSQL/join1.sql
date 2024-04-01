@@ -1,4 +1,12 @@
 
+select * from hr.emp;
+select * from emp; -- Set as default
+select * from nw.categories;
+
+select * from hr.dept;
+
+
+
 select e.*, d.dname
 from hr.emp e 
   join hr.dept d on e.deptno = d.deptno;
