@@ -24,4 +24,4 @@ from hr.dept a
   join hr.emp_salary_hist c on b.empno = c.empno   
 where a.dname in ('SALES', 'RESEARCH')
 and c.fromdate >= to_date('19830101', 'yyyymmdd')
-order by 1, 2, 3, c.fromdate;
+order by 2, c.fromdate; --1, 2, 3 columns
