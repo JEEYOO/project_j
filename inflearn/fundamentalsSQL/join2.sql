@@ -27,3 +27,32 @@ FROM hr.emp_salary_hist s
    JOIN hr.emp_dept_hist d ON s.empno = d.empno
 WHERE s.FROMdate BETWEEN d.fromdate AND d.todate;
 
+
+
+-- with 절
+with 
+temp_01 as (
+select * from hr.emp where deptno = 30
+)
+select * from temp_01;
+
+-- with 
+with 
+temp_01 as (
+select * from hr.emp where deptno = 30
+),
+temp_02 as (
+select * from hr.dept where deptno = 30
+)
+select * from temp_01 t1
+   join temp_02 t2 on t1.deptno = t2.deptno;
+
+--cross join
+with temp_01 as (
+select 1 as rnum
+union all
+select 2 as rnum
+)
+select d.*, t1.*
+from hr.dept d
+   cross join temp_01 t1;
