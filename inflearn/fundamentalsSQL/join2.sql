@@ -19,3 +19,11 @@ from nw.customers c
    left join nw.employees e on o.employee_id = e.employee_id 
    left join nw.shippers s on o.ship_via = s.shipper_id 
 where c.city = 'Madrid';
+
+
+-- 해당 급여를 가졌던 시작 시점에서의 부서번호도 함께 가져올 것
+SELECT s.*, d.*
+FROM hr.emp_salary_hist s
+   JOIN hr.emp_dept_hist d ON s.empno = d.empno
+WHERE s.FROMdate BETWEEN d.fromdate AND d.todate;
+
