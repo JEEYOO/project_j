@@ -30,3 +30,11 @@ from hr.emp e;
 
 select date_trunc('month', hiredate) from hr.emp_test
 order by 1;
+
+select floor(sal/1000)*1000 as s_range, count(*) as cnt, sum(sal)
+from hr.emp 
+group by floor(sal/1000)*1000
+order by 1;
+
+-- else null
+select sum(case when job = 'SALESMAN' then sal end)
