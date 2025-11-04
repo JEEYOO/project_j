@@ -30,6 +30,8 @@ struct ExchangeInfo: View {
                         .scaledToFit()
                         .frame(height:33)
                 }
+
+                ExtractedView()
                 
                 Button("Done") {
                     
@@ -47,3 +49,22 @@ struct ExchangeInfo: View {
 #Preview {
     ExchangeInfo()
 }
+
+struct ExtractedView: View {
+    var body: some View {
+        HStack {
+            Image(.goldpiece)
+                .resizable()
+                .scaledToFit()
+                .frame(height:33)
+            
+            Text("1 Gold Piece = 4 Gold ")
+            
+            Image(.goldpenny)
+                .resizable()
+                .scaledToFit()
+                .frame(height:33)
+        }
+    }
+}
+
