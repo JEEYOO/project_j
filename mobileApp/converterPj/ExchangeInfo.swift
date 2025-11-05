@@ -17,21 +17,6 @@ struct ExchangeInfo: View {
                     .font(.title3)
                     .padding()
 
-/*Use ExchangeRate view instead
-                HStack {
-                    Image(.goldpiece)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height:33)
-                    
-                    Text("1 Gold Piece = 4 Gold Pennies")
-                    
-                    Image(.goldpenny)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height:33)
-                }
-*/
                 ExtractedView(leftImage: .goldpiece, text: "1 Gold Piece = 4 Gold Pennies", rightImage: .goldpenny)
                 ExchangeRate(leftImage: .goldpenny, text: "1 Gold Penny = 4 Silver Pieces", rightImage: .silverpiece)
                 ExchangeRate(leftImage: .silverpiece, text: "1 Silver Piece = 4 Silver Pennies", rightImage: .silverpenny)
@@ -53,22 +38,3 @@ struct ExchangeInfo: View {
 #Preview {
     ExchangeInfo()
 }
-
-struct ExtractedView: View {
-    var body: some View {
-        HStack {
-            Image(.goldpiece)
-                .resizable()
-                .scaledToFit()
-                .frame(height:33)
-            
-            Text("1 Gold Piece = 4 Gold ")
-            
-            Image(.goldpenny)
-                .resizable()
-                .scaledToFit()
-                .frame(height:33)
-        }
-    }
-}
-
