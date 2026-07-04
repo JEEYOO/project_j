@@ -16,3 +16,10 @@ vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
 dirty_dozen = [fruits, vegetables]
 
 print(dirty_dozen[1][1])
+
+
+def life_in_weeks(x) : 
+    weeks = 365 * (90-x) // 7
+    # weeks = 52 * (90-x) 
+    
+    print ("You have %d weeks left." %(weeks))
