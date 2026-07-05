@@ -10,7 +10,13 @@ server <- function(input, output, session) {
                                         filter = "top") %>%
                                       formatCurrency("price", "$") %>%
                                       
-                                      formatStyle("price", color = "green")
+                                      formatStyle("price", color = "green") %>%    
+                                        
+                                      formatStyle("cut",
+                                                  transform = "rotateX(5deg) rotateY(5deg) rotateZ(5deg)",
+                                                  backgroundColor = styleEqual(
+                                                    unique(diamonds$cut), c("salmon", "lightblue", "grey", "lightgreen", "lightpink")
+                                                  ))
 
                                       )
 }  
