@@ -11,8 +11,9 @@ server <- function(input, output, session) {
                                       formatCurrency("price", "$") %>%
                                       
                                       formatStyle("price", color = "green")
-   
-}
+
+                                      )
+}  
 
 ui <- fluidPage(
   DT::dataTableOutput("tableDT")
